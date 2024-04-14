@@ -1,2 +1,12 @@
 @forward "./font";
 @forward "./flex" as flex-*;
+
+@import "../../lib/scss/font";
+
+@include font('ProximaNova', 100, 'Proxima Nova Black');
+@include font('ProximaNova', 200, 'Proxima Nova Extrabold');
+@include font('ProximaNova', 300, 'Proxima Nova Bold');
+@include font('ProximaNova', 400, 'Proxima Nova Semibold');
+@include font('ProximaNova', 500, 'Proxima Nova Regular');
+@include font('ProximaNova', 600, 'Proxima Nova Thin');
+@include font('ProximaNova', 700, 'Proxima Nova Light');

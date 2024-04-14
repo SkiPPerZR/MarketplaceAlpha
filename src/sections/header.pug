@@ -1,0 +1,30 @@
+header.header
+    h1.header__logo
+        | Marketplace
+    .header__search-input
+        label(for='search-input')
+            img(src="../assets/media/search.svg", alt="Search")
+            input(type="text" id="search-input" placeholder="Search for a product, flower, etc")
+    form.header__button-list
+        button.header__button
+            label(for="Buds")
+                img(src="../assets/media/grass.svg", alt="Grass")
+                span Buds
+                input(type="checkbox", id="Buds", checked) 
+        button.header__button
+            label(for="Edible")
+                img(src="../assets/media/grass.svg", alt="Grass")
+                span Edible
+                input(type="checkbox", id="Edible")  
+        button.header__button
+            label(for="NonEdible")
+                img(src="../assets/media/grass.svg", alt="Grass")
+                span Non Edible
+                input(type="checkbox", id="NonEdible")  
+        button.header__button
+            input(type="checkbox", id="Concentrate", class='button__checkbox')
+            label(for="Concentrate") 
+                img(src="../assets/media/grass.svg", alt="Grass")
+                | Concentrate
+              
+    

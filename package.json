@@ -36,7 +36,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.3",
     "hygen": "^6.2.11",
+    "pug": "^3.0.2",
     "sass": "^1.66.1"
-  },
-  "dependencies": {}
+  }
 }
