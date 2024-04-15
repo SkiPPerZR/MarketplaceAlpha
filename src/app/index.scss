@@ -31,11 +31,14 @@ html {
 }
 
 body {
-  margin: 20px;
+  margin: 35px;
 }
 
 header {
-  margin: 0 20px;
+  margin-bottom: 29px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 header h1 {
@@ -43,6 +46,17 @@ header h1 {
   font-weight: 700;
   line-height: 30px;
   color: config.$colors-white;
+}
+
+.header__button {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.header__search-input {
+  margin: 0 16px;
 }
 
 .header__search-input label {
@@ -78,10 +92,6 @@ header h1 {
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
-    background-color: config.$colors-black-green;
-    border-radius: 10px;
-    border: 1px solid;
-    border-image-source: linear-gradient(174.36deg, rgba(132, 213, 44, 0.36) 11.39%, rgba(23, 23, 34, 0) 189.78%);
     transition: ease-in-out 200ms;
     font-size: 18px;
     font-weight: 700;
@@ -97,9 +107,45 @@ header h1 {
     opacity: 0;
   }
   & .button__checkbox+label {
-      box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
-      background-color: config.$colors-grey-blue;
-      transition: ease-in-out 200ms;
-      cursor: pointer;
+    background: radial-gradient(circle at 100% 100%, #353542 0, #353542 9px, transparent 9px) 0% 0%/10px 10px no-repeat,
+            radial-gradient(circle at 0 100%, #353542 0, #353542 9px, transparent 9px) 100% 0%/10px 10px no-repeat,
+            radial-gradient(circle at 100% 0, #353542 0, #353542 9px, transparent 9px) 0% 100%/10px 10px no-repeat,
+            radial-gradient(circle at 0 0, #353542 0, #353542 9px, transparent 9px) 100% 100%/10px 10px no-repeat,
+            linear-gradient(#353542, #353542) 50% 50%/calc(100% - 2px) calc(100% - 20px) no-repeat,
+            linear-gradient(#353542, #353542) 50% 50%/calc(100% - 20px) calc(100% - 2px) no-repeat,
+            linear-gradient(#84d52c 0%, #171722 100%);
+    border-radius: 10px;
+    box-sizing: content-box;
+    transition: ease-in-out 100ms;
+    cursor: pointer;
+  }
+  & .button__checkbox:checked+label, .button__checkbox:focus-visible+label {
+    background: radial-gradient(circle at 100% 100%, #212129 0, #212129 9px, transparent 9px) 0% 0%/10px 10px no-repeat,
+            radial-gradient(circle at 0 100%, #212129 0, #212129 9px, transparent 9px) 100% 0%/10px 10px no-repeat,
+            radial-gradient(circle at 100% 0, #212129 0, #212129 9px, transparent 9px) 0% 100%/10px 10px no-repeat,
+            radial-gradient(circle at 0 0, #212129 0, #212129 9px, transparent 9px) 100% 100%/10px 10px no-repeat,
+            linear-gradient(#212129, #212129) 50% 50%/calc(100% - 2px) calc(100% - 20px) no-repeat,
+            linear-gradient(#212129, #212129) 50% 50%/calc(100% - 20px) calc(100% - 2px) no-repeat,
+            linear-gradient(#84d52c 0%, #171722 100%);
+    border-radius: 10px;
+    box-sizing: content-box;
+    transition: ease-in-out 100ms;
+  }
+  & .button__checkbox:not(:disabled):active+label {
+    box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.2);
+    background-color: config.$colors-grey-blue;
+  }
+}
+
+
+.sliders {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.sliders__item {
+  & span {
+    color: config.$colors-white;
   }
 }

@@ -7,20 +7,20 @@ header.header
             input(type="text" id="search-input" placeholder="Search for a product, flower, etc")
     form.header__button-list
         button.header__button
-            label(for="Buds")
+            input(type="checkbox", id="Buds", class='button__checkbox')
+            label(for="Buds") 
                 img(src="../assets/media/grass.svg", alt="Grass")
-                span Buds
-                input(type="checkbox", id="Buds", checked) 
+                | Buds  
         button.header__button
-            label(for="Edible")
+            input(type="checkbox", id="Edible", class='button__checkbox')
+            label(for="Edible") 
                 img(src="../assets/media/grass.svg", alt="Grass")
-                span Edible
-                input(type="checkbox", id="Edible")  
+                | Edible 
         button.header__button
-            label(for="NonEdible")
+            input(type="checkbox", id="NonEdible", class='button__checkbox')
+            label(for="NonEdible") 
                 img(src="../assets/media/grass.svg", alt="Grass")
-                span Non Edible
-                input(type="checkbox", id="NonEdible")  
+                | Non Edible
         button.header__button
             input(type="checkbox", id="Concentrate", class='button__checkbox')
             label(for="Concentrate") 
